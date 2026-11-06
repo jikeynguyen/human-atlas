@@ -86,3 +86,40 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 @media(max-width:767px){body:has(.detail-sheet) .view-controls{visibility:hidden}}
 
 @media(max-height:600px) and (orientation:landscape){body:has(.detail-sheet) .bottom-dock{left:12px;right:324px;width:auto;transform:none;max-width:none;margin:0}}
+
+
+/* Surgical Dissection Toolkit UI */
+.surgical-bar{position:absolute;top:24px;left:50%;transform:translateX(-50%);z-index:25;padding:6px;display:flex;flex-direction:column;gap:6px;width:fit-content;max-width:calc(100vw - 24px)}
+.surgical-tools{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center}
+.surg-btn{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 12px;border-radius:10px;font-size:12px;font-weight:500;color:#4a5866;border:1px solid transparent}
+.surg-btn:hover{background:#1825360a;color:#1e2d3b}
+.surg-btn.active{background:#263b48;color:#ffffff!important;box-shadow:0 2px 6px #18253620}
+.surg-btn.active.danger{background:#b9382c;color:#ffffff!important}
+.surg-btn.active.accent{background:#0284c7;color:#ffffff!important}
+.surgical-subbar{display:flex;align-items:center;justify-content:center;gap:10px;padding:5px 10px;background:#f4f6f8;border-radius:10px;font-size:11px;color:#475664;flex-wrap:wrap}
+.surg-hint{font-size:11px;color:#526170}
+.surg-mini-btn{display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 9px;border-radius:6px;font-size:11px;font-weight:500;background:#ffffff;border:1px solid #18253618;color:#2f3e4c;text-transform:capitalize}
+.surg-mini-btn.active{background:#263b48;color:#ffffff!important;border-color:#263b48}
+.surg-mini-btn.heal{background:#e6f4f1;color:#1b685f;border-color:#458a8540}
+.surg-slider-wrap{display:flex;align-items:center;gap:8px;min-width:150px}
+.surg-slider-wrap span{font-size:11px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.surg-slider-wrap [data-slot=slider]{width:100px}
+.surg-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;font-size:11px;user-select:none}
+.surg-axis-group{display:flex;gap:3px}
+.tray-panel{max-height:420px;display:flex;flex-direction:column;gap:10px}
+.tray-actions{display:flex;gap:6px;padding-bottom:6px;border-bottom:1px solid #18253612}
+.tray-list{overflow-y:auto;display:flex;flex-direction:column;gap:6px;max-height:310px;padding-right:4px}
+.tray-item{display:flex;align-items:center;gap:9px;padding:7px 9px;background:#f7f9fa;border-radius:8px;font-size:12px}
+.tray-item-info{flex:1;min-width:0;display:flex;flex-direction:column}
+.tray-item-info strong{font-weight:500;color:#263442;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize}
+.tray-item-info small{font-size:10px;color:#788592}
+.excise-action{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:500;min-height:38px;border-radius:9px;background:#fdf2f1;color:#b43b2f!important;border:1px solid #b43b2f30}
+.excise-action:hover{background:#fae5e3!important}
+@media(max-width:1100px){
+ .surgical-bar{top:88px}
+}
+@media(max-width:767px){
+ .surgical-bar{top:auto;bottom:calc(125px + env(safe-area-inset-bottom));padding:5px}
+ .surg-btn{height:32px;padding:0 8px;font-size:11px;gap:4px}
+ .surg-hint{display:none}
+}
